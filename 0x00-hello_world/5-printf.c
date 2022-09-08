@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prin the string
- * t
+ * main - print the string
+ * 
  * return:0
  */
 int main(void)
