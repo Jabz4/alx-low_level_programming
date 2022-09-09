@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
- * main - print the string 
+ * main - Entry point 
  *
  * Return: (0)
+ *
  */
 
 int main(void)
@@ -17,5 +19,5 @@ int main(void)
         printf("size of a long long int: %ld byte(s)\n", sizeof(d)); 
         printf("size of a char: %ld byte(s)\n", sizeof(h));        
         printf("size of a float: %ld byte(s)\n", sizeof(k)); 
-        return (0);
+        return(0);
 }
