@@ -23,10 +23,10 @@ int main(void)
 	{
 		printf("%i is negative\n",  n);
 	}
-    	else 
+	else
 	{
-		printf("%i is positive\n", n);
+		printf("%i is positive\n",  n);
 	}
-	return (0);
+		return (0);
 }
 
