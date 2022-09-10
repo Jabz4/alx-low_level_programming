@@ -2,7 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/*
+ * main - print main function
+ *
+ * Return: 0
+ */
 
 int main(void)
 
