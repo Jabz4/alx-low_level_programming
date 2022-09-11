@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *
- * main - print main function
+ * main -print main function
  * description: usage of main function 
  *
  * Return: 0
