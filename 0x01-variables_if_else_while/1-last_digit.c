@@ -2,17 +2,17 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
+/**
  * main - print main function
  *
  * Return: 0
  */
 
 int main(void)
-
 {
 int n;
 int b;
+
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 b = n % 10;
