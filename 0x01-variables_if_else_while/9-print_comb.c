@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
  *
- * main -print main function
- * description: usage of main function 
+ *main -print main function
+ *description: usage of main function 
  *
- * Return: 0
+ *Return: 0
  */
 
 int main(void)
