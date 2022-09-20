@@ -6,37 +6,31 @@
 
 /**
  *
- * * rev_string - Reverses a string
+ *  * puts_half - prints a string
  *
- * * @s: string to be reversed
+ *   * @str: string to print
  *
- * *
+ *    *
  *
- * * Return: nothing
+ *     * Return: nothing
  *
- * */
+ *      */
 
 
 
-void rev_string(char *s)
+void puts_half(char *str)
 
 {
 
-		int i, tmp, len = _strlen(s);
+		int i, len = _strlen(str);
 
 
 
-			for (i = 0; i < len / 2; i++)
+			for (i = ((len - 1) / 2) + 1; i < len; i++)
 
-					{
+						putchar(*(str + i));
 
-								tmp = *(s + i);
-
-										*(s + i) = *(s + len - i - 1);
-
-												*(s + len - i - 1) = tmp;
-
-													}
+				putchar(10);
 
 }
 
