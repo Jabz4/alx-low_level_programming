@@ -15,7 +15,11 @@
 
 
 void reset_to_98(int *n)
-
+/*
+ *
+ * Description: function reset
+ *
+ */
 {
 
 		*n = 98;
