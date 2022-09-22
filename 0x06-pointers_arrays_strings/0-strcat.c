@@ -1,46 +1,62 @@
+#include "main.h"
 
 
-#include "main.h"                                                                                                                    
 
-                                                                                                                                     
-
-/**                                                                                                                                  
+/**
  *
- *  * strcat - Concatenates the string pointed to by @src, including the x                                                     
+ *  * *_strcat - function commute srtings
  *
- *   *          null byte, to the end of the string pointed to by @dest.                                                                 
+ *   * @dest: param pointer to a char
  *
- *    * @dest: A pointer to the string to be concatenated upon.                                                                           
+ *    * @src: param pointer to a char
  *
- *     * @src: The source string to be appended to @dest.                                                                                  
+ *     * Return: return value of dest
  *
- *      *                                                                                                                                   
- *
- *       * Return: A pointer to the destination string @dest.                                                                                
- *
- *        */                                                                                                                                  
+ *      */
 
-char *_strcat(char *dest, const char *src)                                                                                            
 
-{                                                                                                                                    
 
-	        int index = 0, dest_len = 0;                                                                                                 
+char *_strcat(char *dest, char *src)
 
-		                                                                                                                                     
+{
 
-		        while (dest[index++])                                                                                                        
+		int i;
 
-				                dest_len++;                                                                                                          
+			int j;
 
-			                                                                                                                                     
 
-			        for (index = 0; src[index]; index++)                                                                                         
 
-					                dest[dest_len++] = src[index];                                                                                       
+				i = 0;
 
-				                                                                                                                                     
+					j = 0;
 
-				        return (dest);                                                                                                               
+
+
+						while (dest[i] != '\0')
+
+								{
+
+											i++;
+
+												}
+
+							while (src[j] != '\0')
+
+									{
+
+												dest[i] = src[j];
+
+														j++;
+
+																i++;
+
+																	}
+
+
+
+								dest[i] = '\0';
+
+									return (dest);
 
 }
 
