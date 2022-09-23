@@ -2,7 +2,7 @@
  *
  *  * File: 0-isupper.c
  *
- *   * Aut
+ *   * Auth: Brennan D Baraban
  *
  *    */
 
