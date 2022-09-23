@@ -4,7 +4,7 @@
  *
  *   * Auth: Brennan D Baraban
  *
- *    */
+ */
 
 
 
@@ -20,7 +20,7 @@
  *
  *    * Return: Always 0.
  *
- *     */
+ */
 
 int main(void)
 
@@ -34,7 +34,7 @@ int main(void)
 
 					{
 
-								if (letter != 'e' && letter != 'q')
+			if (letter != 'e' && letter != 'q')
 
 												putchar(letter);
 
