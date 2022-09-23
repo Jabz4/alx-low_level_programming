@@ -1,47 +1,51 @@
-#include <stdio.h>                                                                                                                                       
-
-/**                                                                                                                                                      
+/*
  *
- *  *                                                                                                                                                       
+ *  * File: 4-print_alphabt.c
  *
- *   * main - print main function                                                                                                                            
+ *   * Auth: Brennan D Baraban
  *
- *    *                                                                                                                                                       
+ *    */
+
+
+
+#include <stdio.h>
+
+
+
+/**
  *
- *     * description: using main function                                                                                                                      
+ *  * main - Prints the alphabet in lowercase, except for q and e.
  *
- *      *                                                                                                                                                       
+ *   *
  *
- *       * Return: 0                                                                                                                                             
+ *    * Return: Always 0.
  *
- *        */                                                                                                                                                      
+ *     */
 
-int main(void)                                                                                                                                           
+int main(void)
 
-	                                                                                                                                                         
+{
 
-{                                                                                                                                                        
+		char letter;
 
-	        char h;                                                                                                                                          
 
-		        for (h = 'a' ; h <= 'z' ; h++)                                                                                                                   
 
-				        {                                                                                                                                                
+			for (letter = 'a'; letter <= 'z'; letter++)
 
-						                putchar(h);                                                                                                                              
+					{
 
-								        }                                                                                                                                                
+								if (letter != 'e' && letter != 'q')
 
-			        for (h != 'e' && h != 'q')                                                                                                                   
+												putchar(letter);
 
-					        {                                                                                                                                                
+									}
 
-							                putchar(h);                                                                                                                              
 
-									        }                                                                                                                                                
 
-				        putchar('\n');                                                                                                                                   
+				putchar('\n');
 
-					        return (0);                                                                                                                                      
 
-}      
+
+					return (0);
+
+}
