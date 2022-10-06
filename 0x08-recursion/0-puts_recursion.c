@@ -16,7 +16,7 @@
 void _puts_recursion(char *s)
 /**
  *
- * * my_function - This is a description
+ * * _puts_recursion - This is a description
  *
  **/
 {
