@@ -13,15 +13,13 @@
  *
  */
 
-/**
- *
- * * my_function - This is a description
- *
- *
- */
 void _puts_recursion(char *s)
 
 {
+/**
+ * my_function - This is a description
+ *
+ **/
 
 	if (*s == 0)
 	{
