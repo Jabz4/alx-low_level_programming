@@ -1,17 +1,5 @@
-/*                                                                                                                                      
- *
- *                                                                                                                                       * File: 1-print_rev_recursion.c                                                                                                        
- *
- *                                                                                                                                        * Auth: sam                                                                                                                            
- *
- *                                                                                                                                         */                                                                                                                                     
-
-                                                                                                                                        
-
 #include "main.h"                                                                                                                       
-
-                                                                                                                                        
-
+                                                                                                                                     
 /**                                                                                                                                     
  *
  *  * _print_rev_recursion - Prints a string in reverse.                                                                                   
