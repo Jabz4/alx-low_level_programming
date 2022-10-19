@@ -1,20 +1,15 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
 #include <limits.h>
-
-
 
 /**
  *
- *  * *malloc_checked - allocate memory with malloc
+ *  *malloc_checked - allocate memory with malloc
  *
- *   * @b: unsigned int type
+ *  * @b: unsigned int type
  *
- *    * Return: return pointer
- *
- *     */
+ *  * Return: return pointer
+ **/
 
 void *malloc_checked(unsigned int b)
 
