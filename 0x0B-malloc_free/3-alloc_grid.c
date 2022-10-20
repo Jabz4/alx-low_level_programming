@@ -2,68 +2,84 @@
 
 #include <stdlib.h>
 
-#include <string.h>
-
-
-
 /**
  *
- *  * *array_range - make  memory for an array
+ *  * alloc_grid -returns a pointer to a 2D array of ints
  *
- *   * @min: int type
+ *   * @width: width
  *
- *    * @max: int type
+ *    * @height: height
  *
- *     * Return:  return pointer to array
+ *     * Return: pointer to array
  *
  *      */
 
-
-
-int *array_range(int min, int max)
+int **alloc_grid(int width, int height)
 
 {
 
-		int *ptr;
+	        int freenum;
 
-			int arr;
+		        int x;
 
+			        int y;
 
+				        int i;
 
-				if (min > max)
+					        int **arr;
 
-						{
+						        if (width < 1 || height < 1)
 
-									return (NULL);
+								                return (NULL);
 
-										}
+							        arr = malloc(sizeof(int *) * height);
 
+								        if (arr == NULL)
 
+										                return (NULL);
 
-					ptr = malloc(sizeof(int) * (max - min + 1));
+									        for (i = 0; i < height; i++)
 
-						if (ptr == NULL)
+											        {
 
-								{
+													                arr[i] = malloc(sizeof(int) * width);
 
-											return (NULL);
+															                if (arr[i] == NULL)
 
-												}
+																		                {
 
-							arr = 0;
+																					                        for (freenum = 0; freenum < i; freenum++)
 
-								while (min <= max)
+																									                        {
 
-										{
+																													                                free(arr[freenum]);
 
-													ptr[arr] = min;
+																																	                        }
 
-															min++;
+																								                        free(arr);
 
-																	arr++;
+																											                        return (NULL);
 
-																		}
+																														                }
 
-									return (ptr);
+																	        }
+
+										        for (x = 0; x < height; x++)
+
+												        {
+
+														                for (y = 0; y < width; y++)
+
+																	                {
+
+																				                        arr[x][y] = 0;
+
+																							                }
+
+																        }
+
+											        return (arr);
 
 }
+
+

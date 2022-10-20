@@ -2,56 +2,106 @@
 
 #include <stdlib.h>
 
-
-
 /**
  *
- *  * *_calloc - function to allocates memory
+ *   *_strlen - counts and returns string length
  *
- *   * @nmemb: unsigned int type
+ *     * @s: that's the string
  *
- *    * @size: unsigned int type
+ *       *
  *
- *     * Return: return pointer to array
+ *         * Return: the length
  *
- *      */
+ *           */
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+int _strlen(char *s)
 
 {
 
-		char *ptr;
+	int counter = 0;
 
-			unsigned int count;
+	if (!*s)
 
+		        return (0);
 
+	while (*s)
 
-				if (nmemb == 0 || size == 0)
+	{
 
-							return (NULL);
+		        counter++;
 
-					ptr = malloc(nmemb * size);
+			        s++;
 
-						if (ptr == NULL)
+	}
 
-								{
-
-											return (NULL);
-
-												}
-
-							count = 0;
-
-								while (count < nmemb * size)
-
-										{
-
-													ptr[count] = 0;
-
-															count++;
-
-																}
-
-									return (ptr);
+	return (counter);
 
 }
+
+/**
+ *
+ *  * str_concat - concatenates two strings
+ *
+ *   * @s1: one string
+ *
+ *    * @s2: the other
+ *
+ *     * Return: pointer to cat string
+ *
+ *      */
+
+char *str_concat(char *s1, char *s2)
+
+{
+
+	        char *new;
+
+		        unsigned int i;
+
+			        unsigned int j;
+
+				        int total = 0;
+
+					        if (!s1)
+
+							                s1 = "";
+
+						        if (!s2)
+
+								                s2 = "";
+
+							        total += _strlen(s1) + _strlen(s2);
+
+								        new = malloc((total * sizeof(char)) + 1);
+
+									        if (new == NULL)
+
+											        {
+
+													                return (NULL);
+
+															        }
+
+										        for (i = 0; s1[i]; i++)
+
+												        {
+
+														                new[i] = s1[i];
+
+																        }
+
+											        for (j = 0; s2[j]; j++, i++)
+
+													        {
+
+															                new[i] = s2[j];
+
+																	        }
+
+												        new[i] = '\0';
+
+													        return (new);
+
+}
+
+

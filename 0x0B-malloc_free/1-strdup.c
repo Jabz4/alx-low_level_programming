@@ -2,94 +2,62 @@
 
 #include <stdlib.h>
 
-
-
 /**
  *
- *  * string_nconcat - function to concatnate strings with n bytes
+ *  * _strdup - malloc new str and copy *str into it
  *
- *   * @s1: destination for concatnation
+ *   * @str: the string we copy
  *
- *    * @s2: source of string
+ *    * Return: pointer to new string
  *
- *     * @n: int type for size of byte
- *
- *      * Return: pointer to new memory allocated
- *
- *       */
+ *     */
 
-
-
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *_strdup(char *str)
 
 {
 
-		int count, count1;
+	        unsigned int i;
 
-			int sign = n;
+		        int count = 0;
 
-				char *ptr;
+			        char *dest;
 
-					int len1, len2;
+				        if (str == NULL)
 
+						                return (NULL);
 
+					        for (i = 0; str[i]; i++)
 
-						if (s1 == NULL)
+							        {
 
-									s1 = "";
+									                count++;
 
-							if (s2 == NULL)
+											        }
 
-										s2 = "";
+						        count += 1;
 
+							        dest = malloc(count * sizeof(char));
 
+								        if (dest == NULL)
 
-								for (len1 = 0; s1[len1] != '\0'; len1++)
+										        {
 
-											;
+												                return (NULL);
 
-									for (len2 = 0; s2[len2] != '\0'; len2++)
+														        }
 
-												;
+									        for (i = 0; str[i] != '\0'; i++)
 
+											        {
 
+													                dest[i] = str[i];
 
-										if (sign >= len2)
+															        }
 
-												{
+										        dest[i] = str[i];
 
-															sign = len2;
-
-																	ptr = malloc(sizeof(char) * (len1 + len2 + 1));
-
-																		}
-
-											else
-
-														ptr = malloc(sizeof(char) * (len1 + n + 1));
-
-												if (ptr == NULL)
-
-															return (NULL);
-
-													for (count = 0; count < len1; count++)
-
-															{
-
-																		ptr[count] = s1[count];
-
-																			}
-
-														for (count1 = 0; count1 < sign; count1++)
-
-																{
-
-																			ptr[count++] = s2[count1];
-
-																				}
-
-															ptr[count++] = '\0';
-
-																return (ptr);
+											        return (dest);
 
 }
+
+
